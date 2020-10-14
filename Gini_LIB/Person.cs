@@ -18,12 +18,12 @@ namespace Gini_LIB
         public int Feat3 { get => feat3; set => feat3 = value; }
         public string Classif { get => classif; set => classif = value; }
 
-        public Person(string feat1, string feat2, int feat3)
+        public Person(string feat1, string feat2, int feat3, string classif="")
         {
             Feat1 = feat1;
             Feat2 = feat2;
             Feat3 = feat3;
-            Classif = "";
+            Classif = classif;
         }
 
 

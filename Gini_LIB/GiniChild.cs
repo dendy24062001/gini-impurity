@@ -6,7 +6,17 @@ using System.Threading.Tasks;
 
 namespace Gini_LIB
 {
-    class GiniChild
+    public class GiniChild
     {
+
+        public static double CalcGiniChild(List<GiniT> listOfGini, int totalData)
+        {
+            double giniChild = 0;
+            foreach(GiniT gini in listOfGini)
+            {
+                giniChild += ((gini.Total / (double)totalData) * gini.Gini);
+            }
+            return giniChild;
+        }
     }
 }

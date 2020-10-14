@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace Gini_LIB
 {
-    class GiniT
+    public class GiniT
     {
-        private string namaFeat;
-        private int c0;
-        private int c1;
-        private int total;
-        private double gini;
+        private string namaFeat;  //ADA     Tidak Ada
+        private int c0;           //12      13
+        private int c1;           //13      12
+        private int total;        //25      25
+        private double gini;      //0.48    0.48
 
         public string NamaFeat { get => namaFeat; set => namaFeat = value; }
         public int C0 { get => c0; set => c0 = value; }
@@ -31,7 +31,7 @@ namespace Gini_LIB
 
         public void CalcGini()
         {
-            double gini = 1 - (C0 / Total) - (C1 / Total);
+            double gini = 1 - ((double)C0 / Total) - ((double)C1 / Total);
             Gini = gini;
         }
     }
